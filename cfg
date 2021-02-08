@@ -1,0 +1,42 @@
+%kaikki
+%ajotapa
+	askel_max   = -42000;	# < 0 --> Inf
+	piirto_heti = 1;	#piirretäänkö samalla kun lasketaan
+	tallenna    = 0;
+	tall_nimi   = "ulos";
+	piirtoviive = 0;	#tauko kuvan päivityksen jälkeen (ms)
+	piirtovali  = 10;	#tallvalin monikerta, jos tallennetaan
+	tallvali    = 1;	#aika-askelia / tallennuksia
+	tul_lohot   = 0;	#tulostetaanko lohkoihinjaotus
+%\ajotapa
+
+%grid
+	ndim		= 2;		#monessako ulottuvuudessa lasketaan (1 – 3)
+	resolx		= 200;
+	resoly		= 100;
+	resolz		= 5;
+	tallresolz 	= -1;		#montako z-tasoa tallennetaan, < 0 --> kaikki
+	tallkork	= 0;		#<0 --> puolivälistä, alin tallennettava taso
+	nens		= 4;		#jakolinjojen määrä 2d-tason ympärillä
+	jakosrt		= 0.5;		#suhteellinen matka siirrettää jakopisteitä
+%\grid
+
+%kuvatiedot
+	ikkuna_x    = 600;
+	ikkuna_y    = 0;
+	ikkuna_w    = 1200;
+	ikkuna_h    = 800;
+%\kuvatiedot
+
+%lämpötilat
+	Tin	 = 1.0;
+	Treun	 = [1 2 3 4 5 6].;	#ndim == 1 -> tästä luetaan [1,2]
+	Tala	 = 0.;			#vakiolämmöt 3d-gridin ala- ja yläreunoihin
+	Tula	 = 5.;
+	Tmin     = 0.;			#jos min >= max, näitä ei huomioida
+	Tmax     = 0.;
+	Tkkeski  = 1.;			#paljonko laskettavaa ruutua painotetaan
+	Tkreun	 = [1. 1 1 1 1 1];	#johtuminen jakopätkältä alueelle
+	Tkala	 = 0.05.;
+	Tkula	 = 0.05.;
+%\lämpötilat
